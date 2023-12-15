@@ -1,0 +1,12 @@
+import numpy as np
+import matplotlib.pyplot as plt  
+print("Ціна на легкові автомобілі віком від 2 до 10 років: ")
+x = [2, 3, 4, 5, 6, 7, 8, 9, 10]
+y = [30000, 25000, 23500 , 19400, 18000, 10000, 9100 ,6700, 5000]
+np.array(x)
+np.array(y)
+fig, ax = plt.subplots()
+ax.pie(y, labels = x)
+ax.axis("equal")
+plt.legend() 
+plt.show()
