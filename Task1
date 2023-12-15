@@ -1,0 +1,28 @@
+import numpy as np
+import matplotlib.pyplot as plt
+
+#  функція Y(x)
+def Y(x):
+    return 5 * np.sin(10 * x) * np.sin(3 * x) / (x**x)
+
+# діапазон x
+x_values = np.linspace(0.01, 8, 500)  # Використовуємо 0.01, оскільки функція не визначена в x=0
+
+#  відповідні значення y
+y_values = Y(x_values)
+
+#  графік
+plt.figure(figsize=(8, 6))
+plt.plot(x_values, y_values, linestyle='-', color='blue', linewidth=2, label='Y(x) = 5*sin(10*x)*sin(3*x)/(x^x)')
+
+#  підписи осей та заголовок
+plt.xlabel('x')
+plt.ylabel('Y(x)')
+plt.title('Графік функції Y(x)')
+
+#  легенда
+plt.legend()
+
+# Результат
+plt.grid(True)
+plt.show()
